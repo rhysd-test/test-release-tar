@@ -11,7 +11,7 @@ mv ${name}_* release/
 cd release
 for bin in *; do
     mv "$bin" "$name"
-    tar xf "${bin}.tar" "$name"
+    tar cf "${bin}.tar" "$name"
     gzip "${bin}.tar"
     rm "$name"
 done
